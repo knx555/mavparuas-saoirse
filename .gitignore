@@ -1,0 +1,76 @@
+# MAVPARUAS SAOIRSE — Development Environment
+# .gitignore for Enterprise MIT-Licensed Project
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+.python-version
+
+# === Rust ===
+target/
+Cargo.lock
+*.rlib
+
+# === Node.js ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+package-lock.json
+
+# === IDE / Editor ===
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+
+# === OS ===
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+
+# === Build / Distribution ===
+dist/
+build/
+*.so
+*.dylib
+*.dll
+
+# === Testing ===
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# === Environment ===
+.env
+.env.local
+*.env
+
+# === Logs ===
+*.log
+logs/
+
+# === Playwright (browser binaries managed separately) ===
+# .venv already covers the playwright install
+
+# === Walter Workspace (internal project management) ===
+# Included in repo for project continuity
+# walter-workspace/ is tracked
