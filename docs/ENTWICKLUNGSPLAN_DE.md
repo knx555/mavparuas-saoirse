@@ -4,6 +4,8 @@
 
 ## 1. Zusammenfassung
 
+**SAOIRSE** = **S**ynchronizing **A**ll **O**rigins with **I**ntelligent **R**ecognition, **S**orting & **E**xchange
+
 MAVPARUAS SAOIRSE ist ein universelles Werkzeug zur Datei-Organisation, -Kategorisierung und -Synchronisation. Dieses Dokument definiert den phasenweisen Entwicklungsfahrplan von der rechtlichen Grundlage bis zum Produktionsrelease unter MIT-Lizenz.
 
 **Kerntechnische Entscheidungen:**

@@ -4,6 +4,8 @@
 
 ## 1. Executive Summary
 
+**SAOIRSE** = **S**ynchronizing **A**ll **O**rigins with **I**ntelligent **R**ecognition, **S**orting & **E**xchange
+
 MAVPARUAS SAOIRSE is a universal file organization, categorization, and synchronization tool. This document defines the phased development roadmap from legal foundation through production release under MIT License.
 
 **Key Decisions:**

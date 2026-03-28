@@ -8,7 +8,9 @@
 
 MAVPARUAS SAOIRSE ist ein universelles Werkzeug zur Datei-Organisation, -Kategorisierung und -Synchronisation für Power-User und Enterprise-Umgebungen. Als Teil des [MAVPARUAS](https://github.com/knx555)-Ökosystems bringt SAOIRSE intelligentes Dateimanagement auf den Desktop — mit geplanter Unterstützung für geräteübergreifende Synchronisation und Plugin-basierte Erweiterbarkeit.
 
-> **SAOIRSE** (Irisch: „Freiheit") — Benannt in irischer Tradition, als Ausdruck der Philosophie, Nutzern die volle Kontrolle und Freiheit über ihre Datei-Organisation zu geben.
+> **SAOIRSE** = **S**ynchronizing **A**ll **O**rigins with **I**ntelligent **R**ecognition, **S**orting & **E**xchange
+>
+> Irisch: „Freiheit“ — die Philosophie, Nutzern die volle Kontrolle über ihre Datei-Organisation zu geben.
 
 ## Projektstatus
 
