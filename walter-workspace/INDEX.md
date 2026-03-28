@@ -31,4 +31,4 @@
 | Backlog Items | Siehe [backlog.md](backlog.md) |
 | Nächster Meilenstein | M1: First Scan (Phase 1) |
 | Lizenz | MIT |
-| Repository | [knx555/mavparuas-saoirse](https://github.com/knx555/mavparuas-saoirse) |
+| Repository | [knx555/MAVPARUAS-SAOIRSE](https://github.com/knx555/MAVPARUAS-SAOIRSE) |

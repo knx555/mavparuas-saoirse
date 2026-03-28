@@ -210,13 +210,68 @@ Markus geht einkaufen.
 - architecture-decisions.md: 6 ADRs (Rust, SQLite, MIT, Tauri, Plugins, SAOIRSE)
 - sprint-log.md: Sprint-Tracking (Sprint 0 complete, Sprint 1-2 geplant)
 
-### Phase 0 Status: VOLLSTÄNDIG ABGESCHLOSSEN
+### 19:40 — Repo-Umbenennung zu VERSALIEN-Standard
+- Markus bemerkt: Repo-Name war lowercase `mavparuas-saoirse`
+- VERSALIEN ist Standard seit KLARA (alle Repos: MAVPARUAS-xxx)
+- `gh repo rename MAVPARUAS-SAOIRSE --yes` → erfolgreich
+- Git Remote automatisch aktualisiert
+
+### 19:42 — Architektur-Umstellung (Markus-Direktive)
+**Rust-First Philosophie:**
+- Rust = Primärsprache für ALLE Logik (Backend, Sync, Plugins, CLI, API)
+- Python = NUR für KI/ML (nur wenn kein ONNX-Export / kein Rust-Äquivalent)
+- TypeScript + Electron = GUI ONLY (reine Präsentationsschicht)
+- **Tauri ist RAUS** — Electron bietet bessere Accessibility + reiferes Ökosystem
+- Rust Sidecar via IPC (JSON-RPC) für alle Business-Logik hinter der GUI
+- `ort` Crate für Rust-nativen ONNX-Inference statt PyO3
+
+### 19:44 — Markus geht einkaufen, Auftrag: Aufwendige Sprint-Planung
+**Zitat**: "Lass dir bitte Zeit. Schreib das sehr aufwendig. Mach gleich Milestones.
+Mach gleich am besten Sprints. Strukturier das logisch."
+**Erlaubnis**: Subagents beauftragen, 20+ Minuten nehmen, alles nutzen
+
+### 19:44 – 20:30 — Systematische Dokumentations-Überarbeitung
+Alle Projektdokumente auf Rust-First + Electron Architektur aktualisiert:
+
+1. **DEVELOPMENT-PLAN.md** (EN) → Komplett-Rewrite v1.1 (~700 Zeilen)
+   - 21 Sprints (S0.3 → S21), 5 Phasen, 10 Milestones (M0-M10)
+   - Rust-First Philosophy mit Sprachhierarchie-Tabelle
+   - Detaillierte Sprint-Tasks mit Acceptance Criteria
+   - Sprint-Kalender mit Datumsangaben (April 2026 → Jan 2027)
+   - 10-Punkte Risiko-Register (inkl. Electron Binary Size, ONNX-Gaps)
+
+2. **ENTWICKLUNGSPLAN_DE.md** (DE) → Komplett-Rewrite v1.1
+   - Spiegelt EN-Version in Deutsch, eigene Sprint-Übersichtstabellen
+   - "Python-Grenze" und "Grenzregel" Abschnitte
+
+3. **architecture-decisions.md** → Major Update
+   - ADR-004: Tauri→Electron komplett umgeschrieben (Akzeptiert)
+   - NEU ADR-007: Rust-First Entwicklungsphilosophie
+   - NEU ADR-008: Privacy-by-Design & Lokale KI
+   - ADR-005: PyO3 → ONNX/Subprocess
+
+4. **README.md + README_DE.md** → Tech-Stack-Tabellen aktualisiert
+   - Rust-First, Electron+TypeScript für GUI, Python (AI only)
+
+5. **INDEX.md** → Repo-Link zu VERSALIEN korrigiert
+
+6. **backlog.md** → Komplett-Rewrite (55+ Items mit Sprint-Zuordnung)
+   - Phase-Headers mit Architektur-Annotationen
+   - Phase 2: PyO3 → ONNX/`ort`, Phase 4: Tauri → Electron
+
+7. **sprint-log.md** → Komplett-Rewrite
+   - Sprint-Kalender-Übersicht (21 Sprints)
+   - Sprint 0 mit vollständiger Task-Liste (DONE)
+   - Sprint 0.3, 1, 2 mit geplanten Tasks
+
+### Phase 0 Status: VOLLSTÄNDIG ABGESCHLOSSEN (inkl. Architektur-Overhaul)
 
 ### Kernkonzept des Tools
 - Universelle Datei-Organisation über alle Speicherorte hinweg
 - Plugin-System für verschiedene Backends (Nextcloud, OneDrive, Dropbox, Hetzner, lokal)
 - Lokale Datenbank mit Hash-Dedup
-- Lokale KI für intelligente Sortierung
-- Keine Daten fließen nach außen
+- Lokale KI für intelligente Sortierung (ONNX via `ort`, Rust-nativ)
+- Keine Daten fließen nach außen (Privacy-by-Design, ADR-008)
 - MCP-steuerbar
 - Von-überall-nach-überall Sync/Normalisierung
+- **Architektur**: Rust-First, Electron GUI (Präsentation), Python nur KI/ML

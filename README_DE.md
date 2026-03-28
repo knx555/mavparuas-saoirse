@@ -34,15 +34,16 @@ Das Projekt befindet sich in der Initialisierungsphase mit Aufbau der rechtliche
 
 ## Technologie-Stack
 
-| Schicht | Technologie |
-| --- | --- |
-| Core Engine | Rust (performanzkritisch) |
-| Plugin-System | MAVPARUAS Plugin-Architektur |
-| Plugin-Sprachen | Perl, Python, C, C++, Rust |
-| Kommunikation | HTTP APIs, FFI, IPC |
-| Frontend (CLI) | Rust / Python |
-| Frontend (GUI) | TBD (Tauri / GTK geplant) |
-| Datenbank | Konfigurierbar (SQLite Standard) |
+| Schicht | Technologie | Anmerkungen |
+| --- | --- | --- |
+| Core Engine | **Rust** | ALLE Logik, Routing, Geschäftslogik |
+| Plugin-System | MAVPARUAS Plugin-Architektur | FFI + HTTP Hybrid |
+| Plugin-Sprachen | Rust, C/C++, Python (nur KI) | Rust-First Policy |
+| Kommunikation | IPC (JSON-RPC), FFI, HTTP | Electron ↔ Rust Sidecar |
+| Frontend (CLI) | **Rust** (clap) | Volle CLI-Oberfläche |
+| Frontend (GUI) | **Electron + TypeScript** | NUR Präsentationsschicht |
+| KI/ML | **Rust** (ONNX via `ort`) | Python-Fallback für Nicht-ONNX-Modelle |
+| Datenbank | SQLite (Standard) | Konfigurierbare Backends |
 
 ## Projektstruktur
 
